@@ -1,0 +1,1 @@
+in this first part, the notes are actually all in the "main.rs" file, but in the future they will be in "notes.md"
