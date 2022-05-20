@@ -71,8 +71,78 @@ fn main() {
     
     // #region functions
     
-    
+    // functions look like this:
+    fn my_function(x: i32, y: i32) -> i32 {
+        let sum: i32 = x + y;
+        return sum;
+    }
+    // use snake_case for function names in rust
+    // make sure to specify types for params
+    // the return type must also be specified after ->
+    // lastly fun fact, you can choose to not write return as rust will automatically return the last line of a function if it is returnable
     
     // #endregion functions
 
+    // #region statments & loops
+    
+    // here is an if/else:
+    let number:i32 = 5;
+    
+    if number < 10 {
+        println!("{}", "hi");
+    } else if number > 20 {
+        println!("{}", "bye");
+    } else {
+        println!("{}", "number was in between 10 and 20");
+    }
+    // expressions for if/else MUST be explicitly boolean in rust (i.e. you cant just put falsey/truthy statments like (if number {}))
+    
+    // inline or ternary if/else:
+    let isTrue:bool = if 1 == 1 {true} else {false};
+    
+    
+    
+    // here is a general loop
+    // to get out of a loop, use break keyword
+    let mut counter: i32 = 0;
+    
+    loop {
+        println!("{}", "im loopin");
+        
+        if counter == 5 {
+            break;
+        }
+        
+        counter +=1;
+        
+    }
+    
+    
+    // here is a while loop
+    let mut count_down:i32 = 3;
+    
+    while count_down != 0 {
+        println!("{}!", count_down);
+        
+        count_down -= 1;
+        
+        if count_down == 0 {
+            println!("liftoff!!!");
+            break;
+        }
+    }
+    
+    
+    // here is a for loop
+    let an_array: [i32; 5] = [10, 20, 30, 40, 50];
+    
+    for element in an_array.iter() {
+        println!("the value is: {}", element);
+    }
+    
+    for each_number in (1..4) {
+        println!("the number is {}", each_number)
+    }
+    
+    // #endregion statments
 }
